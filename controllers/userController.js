@@ -40,12 +40,12 @@ module.exports = {
             .then((user) =>
                 !user
                     ? res.status(404).json({ message: 'No user with this id!' })
-                    : res.json(course)
+                    : res.json(user)
             )
             .catch((err) => res.status(500).json(err));
     },
     // Delete a user
-    deleteCourse(req, res) {
+    deleteUser(req, res) {
         Course.findOneAndDelete({ _id: req.params.userId })
             .then((user) =>
                 !user
@@ -56,4 +56,37 @@ module.exports = {
             .then(() => res.json({ message: 'User and thoughts deleted!' }))
             .catch((err) => res.status(500).json(err));
     },
+    ///Used 18-NoSQL/01-Activities/25-Ins_CRUD-Subdoc/controllers/videoController as a reference 
+    //To add a friend
+    addFriend(req, res) {
+        User.findOneAndUpdate(
+          { _id: req.params.userId },
+          { $addToSet: { responses: req.body } },
+          { runValidators: true, new: true }
+        )
+          .then((user) =>
+            !user
+              ? res.status(404).json({ message: 'No Friend with this id!' })
+              : res.json(user)
+          )
+          .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+          });
+      },
+      //Used 18-NoSQL/01-Activities/25-Ins_CRUD-Subdoc/controllers/videoController as a reference
+      //delete users friend
+      deleteFriend(req, res) {
+        User.findOneAndUpdate(
+          { _id: req.params.userId },
+          { $pull: { friends: { friendId: req.params.friendId } } },
+          { runValidators: true, new: true }
+        )
+          .then((user) =>
+            !user
+              ? res.status(404).json({ message: 'No friend with this id!' })
+              : res.json(video)
+          )
+          .catch((err) => res.status(500).json(err));
+      },
 };
