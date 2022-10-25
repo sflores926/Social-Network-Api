@@ -1,6 +1,7 @@
+///Used 18-NoSQL/01-Activities/25-Ins_CRUD-Subdoc/models/Response as reference
 const { Schema, Types } = require('mongoose');
 
-const responseSchema = new Schema(
+const reactionSchema = new Schema(
   {
     reactionId: {
       type: Schema.Types.ObjectId,
@@ -28,4 +29,4 @@ const responseSchema = new Schema(
   }
 );
 
-module.exports = responseSchema;
+module.exports = reactionSchema;
