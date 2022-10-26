@@ -14,15 +14,11 @@ const thoughtSchema = new Schema(
       type: Date,
       default: Date.now,
     },
-    advertiserFriendly: {
-      type: Boolean,
-      default: true,
-    },
     username: {
       type: String,
       required: true
     },
-    reactions: [Reaction],
+    reactions: [reactionSchema],
   },
   {
     toJSON: {
