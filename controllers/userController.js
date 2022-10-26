@@ -74,6 +74,26 @@ module.exports = {
             res.status(500).json(err);
           });
       },
+
+      // addAssignment(req, res) {
+      //   console.log('You are adding an assignment');
+      //   console.log(req.body);
+      //   Student.findOneAndUpdate(
+      //     { _id: req.params.studentId },
+      //     { $addToSet: { assignments: req.body } },
+      //     { runValidators: true, new: true }
+      //   )
+      //     .then((student) =>
+      //       !student
+      //         ? res
+      //           .status(404)
+      //           .json({ message: 'No student found with that ID :(' })
+      //         : res.json(student)
+      //     )
+      //     .catch((err) => res.status(500).json(err));
+      // },
+
+
       //Used 18-NoSQL/01-Activities/25-Ins_CRUD-Subdoc/controllers/videoController as a reference
       //delete users friend
       deleteFriend(req, res) {
