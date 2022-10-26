@@ -32,7 +32,7 @@ module.exports = {
     },
     // Update user
     updateUser(req, res) {
-        Course.findOneAndUpdate(
+        User.findOneAndUpdate(
             { _id: req.params.userId },
             { $set: req.body },
             { runValidators: true, new: true }
@@ -46,7 +46,7 @@ module.exports = {
     },
     // Delete a user
     deleteUser(req, res) {
-        Course.findOneAndDelete({ _id: req.params.userId })
+        User.findOneAndDelete({ _id: req.params.userId })
             .then((user) =>
                 !user
                     ? res.status(404).json({ message: 'No user with that ID' })
