@@ -61,7 +61,7 @@ module.exports = {
     addFriend(req, res) {
         User.findOneAndUpdate(
           { _id: req.params.userId },
-          { $addToSet: { friends: req.body } },
+          { $addToSet: { friends: req.params.friendId } },
           { runValidators: true, new: true }
         )
           .then((user) =>
@@ -75,23 +75,6 @@ module.exports = {
           });
       },
 
-      // addAssignment(req, res) {
-      //   console.log('You are adding an assignment');
-      //   console.log(req.body);
-      //   Student.findOneAndUpdate(
-      //     { _id: req.params.studentId },
-      //     { $addToSet: { assignments: req.body } },
-      //     { runValidators: true, new: true }
-      //   )
-      //     .then((student) =>
-      //       !student
-      //         ? res
-      //           .status(404)
-      //           .json({ message: 'No student found with that ID :(' })
-      //         : res.json(student)
-      //     )
-      //     .catch((err) => res.status(500).json(err));
-      // },
 
 
       //Used 18-NoSQL/01-Activities/25-Ins_CRUD-Subdoc/controllers/videoController as a reference
