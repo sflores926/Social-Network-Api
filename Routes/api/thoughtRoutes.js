@@ -13,6 +13,10 @@ const {
 // /api/thoughts
 router.route('/').get(getThoughts).post(createThought);
 
+
+//to create or add a thought 
+// router.route('/:userId').post(createThought);
+
 // /api/thoughts/:thoughtId
 router
   .route('/:thoughtId')
