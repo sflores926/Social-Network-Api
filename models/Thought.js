@@ -4,7 +4,7 @@ const Reaction = require('./Reaction');
 // Schema to create Post model
 const thoughtSchema = new Schema(
   {
-    thougthText: {
+    thoughtText: {
       type: String,
       default: false,
       minLength: 1,
