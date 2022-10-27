@@ -1,3 +1,4 @@
+//Used 18-NoSQL/01-Activities/23-Ins_Subdoc-Population/models/User.js as reference
 const { Schema, model } = require('mongoose');
 
 const validateEmail = (email) => {
