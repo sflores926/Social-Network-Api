@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 const Reaction = require('./Reaction');
-const moment= require('moment');
+// const moment= require('moment');
 
 // Schema to create Post model
 const thoughtSchema = new Schema(
@@ -12,10 +12,11 @@ const thoughtSchema = new Schema(
       maxLength: 280,
     },
     createdAt: {
-      type: Date,
-      default: new Date
+      //changed it to a string to get date formattee will not with newDate() if type is a Date
+      type: String,
+      default: new Date(),
       //Use a getter method to format the timestamp on query not wokring 
-      // get: (startingDate) => moment(startingDate).format('MMMM Do YYYY, h:mm:ss a')
+      // get: moment(startingDate).format('YYYY-MM-DD HH:mm:ss')
       
     },
 

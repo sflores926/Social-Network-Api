@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node index",
     "dev": "nodemon index",
-    "seed": "node utils/seed.js"
+    "seed": "node utils/seed.js",
+    "quicksave": "git add . && git commit -m \"quicksave\" && git push"
   },
   "dependencies": {
     "express": "^4.17.1",
