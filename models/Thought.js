@@ -13,9 +13,9 @@ const thoughtSchema = new Schema(
     },
     createdAt: {
       type: Date,
-      default: Date.now,
+      default: new Date
       //Use a getter method to format the timestamp on query not wokring 
-      get: (startingDate) => moment(startingDate).format('MMMM Do YYYY, h:mm:ss a')
+      // get: (startingDate) => moment(startingDate).format('MMMM Do YYYY, h:mm:ss a')
       
     },
 
