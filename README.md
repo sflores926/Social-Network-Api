@@ -49,3 +49,15 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
 ## Videos
 
+
+https://user-images.githubusercontent.com/106363593/198820343-989e733a-a9f3-4a7a-a43f-663aaba0408c.mp4
+
+
+
+https://user-images.githubusercontent.com/106363593/198820352-03017725-e018-493b-ba12-1bcfebd47e4f.mp4
+
+
+
+
+https://user-images.githubusercontent.com/106363593/198820378-c40cc0a8-6ea5-4311-b04b-bd7f40d6c8c5.mp4
+
