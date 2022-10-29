@@ -20,7 +20,7 @@ SO THAT my website can handle large amounts of unstructured data
   - [Installation](#installation)
   - [Acceptance Criteria](#acceptance-criteria)
   - [Links](#links)
-  - [Video](#video)
+  - [Videos](#videos)
 
 ## Installation
 
@@ -45,9 +45,9 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
 ## Links
 
-* GitHub: https://github.com/sflores926/Employee-Tracker
+* GitHub: https://github.com/sflores926/Social-Network-Api
 
-## Video
+## Videos
 
 
 
